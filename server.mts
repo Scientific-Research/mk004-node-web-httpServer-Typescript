@@ -1,13 +1,12 @@
 // import http from 'http';
-import * as http from 'http';
+// import * as http from 'http';
+import { createServer, IncomingMessage, ServerResponse } from 'http';
 const port = 8000;
 
-http
-  .createServer((req: http.IncomingMessage, res: http.ServerResponse) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.write('info site');
-    res.end();
-  })
-  .listen(port);
+createServer((req: IncomingMessage, res: ServerResponse) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.write('info site');
+  res.end();
+}).listen(port);
 
 console.log(`listening on http://localhost:${port}`);
