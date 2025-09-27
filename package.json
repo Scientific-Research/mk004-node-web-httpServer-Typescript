@@ -2,11 +2,15 @@
   "name": "mk004-node-web-server",
   "version": "1.0.0",
   "main": "test.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^24.5.2"
+  }
 }
