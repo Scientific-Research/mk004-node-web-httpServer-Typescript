@@ -6,6 +6,8 @@ export const mainContent = `<!DOCTYPE html>
     <title>Info Site</title>
     <style>
       body {
+        background-color: #333;
+        color: #ddd;
         font-family: sans-serif;
         padding: 0 1rem;
       }
