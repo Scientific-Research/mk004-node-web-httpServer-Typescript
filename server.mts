@@ -1,7 +1,7 @@
 // import http from 'http';
 // import * as http from 'http';
 import { createServer, IncomingMessage, ServerResponse } from 'http';
-import { mainContent } from './content.mjs';
+import { mainContent } from './content.mts';
 
 const port = 8000;
 
