@@ -4,8 +4,7 @@
   "main": "test.js",
   "type": "module",
   "scripts": {
-    "start-server": "tsc -P tsconfig.json",
-    "watch-server": "nodemon --watch server.mts --watch content.mts --exec \"tsc -P tsconfig.json\"",
+    "watch-server": "nodemon --watch server.mts",
     "run-server": "nodemon dist/server.mjs",
     "dev-server": "concurrently \"npm:watch-server\" \"npm:run-server\""
   },
