@@ -1,20 +1,24 @@
 {
   "name": "mk004-node-web-server",
   "version": "1.0.0",
-  "main": "test.js",
+  "main": "server.mts",
   "type": "module",
   "scripts": {
-    "watch-server": "nodemon --watch server.mts",
+    "watch-server": "nodemon --watch server.mts --watch content.mts --exec \"tsc -P tsconfig.json\"",
     "run-server": "nodemon dist/server.mjs",
-    "dev-server": "concurrently \"npm:watch-server\" \"npm:run-server\""
+    "serve": "node --loader ts-node/esm bs-reload.mts",
+    "dev-server": "concurrently \"npm:watch-server\" \"npm:run-server\" \"npm:serve\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/browser-sync": "^2.29.0",
     "@types/node": "^24.5.2",
+    "browser-sync": "^3.0.4",
     "concurrently": "^9.2.1",
-    "nodemon": "^3.1.10"
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2"
   }
 }
